@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Serif JP", serif;
+    line-height: 1.6;
+    color: #000;
+    background-color: #fff;
+}
+
+/* ヘッダー */
+header {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.0rem;
+    font-weight: 600;
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+header .subtitle {
+    font-size: 1rem;
+    margin-bottom: 16px;
+    color: #666;
+}
+
+/* メインコンテンツ */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 40px;
+}
+
+/* 作品一覧 */
+.works {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.work {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.work-image {
+    flex-shrink: 0;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border: 1px solid #000;
+    background-color: #f5f5f5;
+}
+
+.work-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.work-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.work-content time {
+    font-size: 0.9rem;
+    color: #666;
+    letter-spacing: 0.05em;
+}
+
+.work-content h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: -12px;
+}
+
+.work-description {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.work-link {
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+.work-link:hover {
+    opacity: 0.6;
+}
+
+/* 参考書籍 */
+.books {
+    background-color: #f5f5f5;
+    padding: 60px 40px;
+}
+
+.books-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.books h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.book-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.book-item img {
+    width: 100%;
+    height: 400px;
+    display: block;
+    object-fit: contain;
+}
+
+.book-item h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    line-height: 1.5;
+    height: 3.6rem;
+}
+
+.book-item p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.book-link {
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+.book-link:hover {
+    opacity: 0.6;
+}
+
+/* フッター */
+footer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 40px 60px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    header {
+        padding: 60px 24px 40px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    main {
+        padding: 40px 24px;
+    }
+
+    .works {
+        gap: 60px;
+    }
+
+    .work {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .work-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    .work-image img {
+        object-fit: cover;
+    }
+
+    .work-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .books {
+        padding: 40px 24px;
+    }
+
+    .books-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    footer {
+        padding: 30px 24px 40px;
+    }
+}
