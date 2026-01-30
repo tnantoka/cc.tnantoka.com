@@ -11,6 +11,22 @@ body {
     background-color: #fff;
 }
 
+/* Aboutリンク */
+.about-link {
+    position: absolute;
+    top: 32px;
+    right: 24px;
+    color: #000;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+.about-link:hover {
+    opacity: 0.6;
+}
+
 /* ヘッダー */
 header {
     max-width: 800px;
